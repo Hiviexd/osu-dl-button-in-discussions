@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu! download button in beatmap discussions
 // @namespace    https://github.com/Hiviexd/osu-dl-button-in-discussions
-// @version      1.1
+// @version      1.2
 // @description  because who uses the beatmap info button anyways
 // @author       Hivie
 // @downloadURL  https://github.com/Hiviexd/osu-dl-button-in-discussions/raw/main/script.user.js
@@ -29,7 +29,10 @@ function changeButton(){
     let btn = document.querySelector("body > div.osu-layout__section.osu-layout__section--full.js-content.beatmaps_discussion > div > div:nth-child(3) > div > div.beatmap-discussions-header-bottom__content.beatmap-discussions-header-bottom__content--details > div:nth-child(3) > a")
     let text = document.querySelector("body > div.osu-layout__section.osu-layout__section--full.js-content.beatmaps_discussion > div > div:nth-child(3) > div > div.beatmap-discussions-header-bottom__content.beatmap-discussions-header-bottom__content--details > div:nth-child(3) > a > span > span.btn-osu-big__left > span");
     let icon = document.querySelector("body > div.osu-layout__section.osu-layout__section--full.js-content.beatmaps_discussion > div > div:nth-child(3) > div > div.beatmap-discussions-header-bottom__content.beatmap-discussions-header-bottom__content--details > div:nth-child(3) > a > span > span.btn-osu-big__icon > span > span");
-    btn.href = "https://osu.ppy.sh/beatmapsets/" + mapId + "/download";
+    btn.onclick = function() {
+        window.open("https://osu.ppy.sh/beatmapsets/" + mapId + "/download", "_blank");
+        return false;
+    }
     text.innerHTML = "Download";
     icon.className = "fas fa-download";
 }
