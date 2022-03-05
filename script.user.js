@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         osu! download button in beatmap discussions
-// @namespace    https://github.com/Hiviexd/
+// @namespace    https://github.com/Hiviexd/osu-dl-button-in-discussions
 // @version      1.0
 // @description  because who uses the beatmap info button anyways
 // @author       Hivie
+// @downloadURL  https://github.com/Hiviexd/osu-dl-button-in-discussions/raw/main/script.user.js
+// @updateURL    https://github.com/Hiviexd/osu-dl-button-in-discussions/raw/main/script.user.js
 // @match        https://osu.ppy.sh/beatmapsets/*/discussion
 // @grant        none
 // @run-at document-end
