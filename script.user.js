@@ -40,11 +40,3 @@ function HandleDOM_ChangeWithDelay (zEvent)
     }
     zGbl_DOM_ChangeTimer = setTimeout (function() { changeButton (); }, 222); //-- 222 milliseconds
 }
-
-
-
-
-
-
-
-
