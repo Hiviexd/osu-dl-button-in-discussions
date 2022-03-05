@@ -1,5 +1,5 @@
 # osu-dl-button-in-discussions
-because who uses the beatmap info button anyways.
+because who uses the beatmap info button anyways. (thankyou Capu for the idea)
 
 script is self-explanatory
 
