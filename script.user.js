@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         osu! download button in beatmap discussions
 // @namespace    https://github.com/Hiviexd/osu-dl-button-in-discussions
-// @version      1.2
+// @version      1.2.1
 // @description  because who uses the beatmap info button anyways
 // @author       Hivie
 // @downloadURL  https://github.com/Hiviexd/osu-dl-button-in-discussions/raw/main/script.user.js
 // @updateURL    https://github.com/Hiviexd/osu-dl-button-in-discussions/raw/main/script.user.js
-// @match        https://osu.ppy.sh/beatmapsets/*/discussion
+// @match        https://osu.ppy.sh/beatmapsets/*/discussion*
 // @grant        none
 // @run-at document-end
 // ==/UserScript==
@@ -17,10 +17,8 @@ var bGbl_ChangeEventListenerInstalled = false;
 window.addEventListener ("load", changeButton, false);
 
 function changeButton(){
-     if (!bGbl_ChangeEventListenerInstalled)
-    {
+     if (!bGbl_ChangeEventListenerInstalled){
         bGbl_ChangeEventListenerInstalled = true;
-
         document.addEventListener ("DOMSubtreeModified", HandleDOM_ChangeWithDelay, false);
     }
 
@@ -37,10 +35,8 @@ function changeButton(){
     icon.className = "fas fa-download";
 }
 
-function HandleDOM_ChangeWithDelay (zEvent)
-{
-    if (typeof zGbl_DOM_ChangeTimer == "number")
-    {
+function HandleDOM_ChangeWithDelay (zEvent){
+    if (typeof zGbl_DOM_ChangeTimer == "number"){
         clearTimeout (zGbl_DOM_ChangeTimer);
         zGbl_DOM_ChangeTimer = '';
     }
